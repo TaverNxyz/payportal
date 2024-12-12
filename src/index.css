@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900;
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .animate-gradient {
+    background: linear-gradient(
+      -45deg,
+      theme('colors.purple.900'),
+      theme('colors.gray.900'),
+      theme('colors.purple.800'),
+      theme('colors.gray.800')
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .payment-card {
+    @apply relative overflow-hidden rounded-2xl p-6 backdrop-blur-lg
+           border border-purple-500/20 bg-gray-900/40 transform transition-all;
+  }
+
+  .payment-card:hover {
+    @apply bg-gray-800/50 shadow-lg shadow-purple-500/20;
+    animation: cardHover 0.3s ease-out forwards;
+  }
+
+  .spotlight {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300
+           bg-gradient-to-r from-purple-500/5 via-transparent to-purple-500/5;
+  }
+
+  .payment-card:hover .spotlight {
+    @apply opacity-100;
+  }
+
+  .logo-text {
+    @apply font-orbitron bg-clip-text text-transparent bg-gradient-to-r 
+           from-purple-400 to-purple-600 animate-pulse;
+  }
+
+  .video-container {
+    @apply bg-gray-900/40 p-6 rounded-xl backdrop-blur-lg
+           border border-purple-500/20 transform transition-all;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes cardHover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+.cursor-spotlight {
+  @apply fixed pointer-events-none w-16 h-16 
+         bg-purple-500/5 backdrop-blur-[1px] transform -translate-x-1/2 -translate-y-1/2
+         transition-all duration-75 ease-out rotate-45;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
