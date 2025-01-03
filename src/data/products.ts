@@ -32,6 +32,6 @@ export const products: Product[] = [
       { period: 'month', price: 80 }
     ],
     description: 'External enhancement suite for Escape from Tarkov',
-    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80'
+    image: 'https://undetect.net/assets/eftpreview2-CrhVMEKD.png'
   }
 ];
