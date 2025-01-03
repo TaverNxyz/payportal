@@ -73,17 +73,6 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({
             </div>
             <span className="text-gray-400">${selectedTier.price}</span>
           </button>
-
-          <button
-            onClick={() => onSelectPayment('ethereum')}
-            className="w-full flex items-center justify-between p-4 border border-gray-700 rounded-lg hover:bg-gray-700/50 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              <Wallet className="text-purple-500" size={24} />
-              <span className="font-medium text-gray-100">Ethereum</span>
-            </div>
-            <span className="text-gray-400">${selectedTier.price}</span>
-          </button>
         </div>
       </div>
     </div>
