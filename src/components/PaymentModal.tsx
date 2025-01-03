@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, DollarSign, CircleDollarSign, Bitcoin, Wallet, Coins } from 'lucide-react';
+import { X, DollarSign, CircleDollarSign, Bitcoin, Coins } from 'lucide-react';
 import { Product, PricingTier } from '../types/product';
 import { PaymentMethod } from '../types/payment';
 
